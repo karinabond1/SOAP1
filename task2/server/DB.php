@@ -38,9 +38,9 @@ class DB
         return $cars;
     }
 
-    public function getCarInfo()
+    public function getCarInfo($id)
     {
-        $id = 2;
+        //$id = 2;
         $cars = array();
         //$brand = array();
         $result = array();
@@ -59,7 +59,6 @@ class DB
 
             $indexCar = 0;
             while ($row = $selectCarinfo->fetch(PDO::FETCH_ASSOC)) {
-                echo "+".$row."-";
                 $cars[$indexCar] = $row;
                 $indexCar++;
             }
@@ -83,12 +82,12 @@ class DB
             /*array_push($result,$cars);
             //array_push($result,$brand);
             array_push($result,$color);*/
-            var_dump($cars);
+            //var_dump($cars);
 
         } catch (PDOException $e) {
             echo $str = 'Error:+ ' . $e->getMessage();
         }
-        return $result;
+        return $cars;
     }
 
     public function find($arr)
