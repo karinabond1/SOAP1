@@ -1,0 +1,98 @@
+CREATE TABLE autoshop_cars (
+id INT(6) AUTO_INCREMENT,
+brand_id INT(6) NOT NULL,
+model VARCHAR(255) NOT NULL,
+year_issue INT(4) NOT NULL,
+engin_capacity DOUBLE NOT NULL,
+max_speed DOUBLE NOT NULL,
+price DOUBLE NOT NULL,
+PRIMARY KEY(id),
+FOREIGN KEY (brand_id) REFERENCES autoshop_brand(id)
+);
+
+CREATE TABLE autoshop_brand (
+id INT(6) AUTO_INCREMENT PRIMARY KEY,
+brand VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE autoshop_color (
+id INT(6) AUTO_INCREMENT PRIMARY KEY,
+color VARCHAR(255) NOT NULL
+);
+
+CREATE TABLE autoshop_car_color (
+id INT(6)  AUTO_INCREMENT PRIMARY KEY,
+car_id INT(6) NOT NULL,
+color_id INT(6) NOT NULL
+);
+
+CREATE TABLE autoshop_client_order (
+id INT(6)  AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(255) NOT NULL,
+surname VARCHAR(255) NOT NULL,
+payment ENUM("cash","credit_card") 
+);
+
+CREATE TABLE autoshop_car_order (
+id INT(6)  AUTO_INCREMENT PRIMARY KEY,
+car_id INT(6) NOT NULL,
+order_id INT(6) NOT NULL
+);
+
+insert into autoshop_brand (brand) values('Audi');
+insert into autoshop_brand (brand) values('Bentley');
+insert into autoshop_brand (brand) values('BMW');
+insert into autoshop_brand (brand) values('Chevrolet');
+insert into autoshop_brand (brand) values('Ford');
+insert into autoshop_brand (brand) values('Fiat');
+insert into autoshop_brand (brand) values('Honda');
+insert into autoshop_brand (brand) values('Hyunday');
+insert into autoshop_brand (brand) values('Kia');
+insert into autoshop_brand (brand) values('Lexus');
+insert into autoshop_brand (brand) values('Opel');
+insert into autoshop_brand (brand) values('Peugeot');
+insert into autoshop_brand (brand) values('Subaru');
+insert into autoshop_brand (brand) values('Toyota');
+insert into autoshop_brand (brand) values('Volkswagen');
+
+insert into autoshop_color (color) values('white');
+insert into autoshop_color (color) values('brown');
+insert into autoshop_color (color) values('black');
+insert into autoshop_color (color) values('grey');
+insert into autoshop_color (color) values('blue');
+insert into autoshop_color (color) values('red');
+insert into autoshop_color (color) values('green');
+
+insert into autoshop_car_color (car_id,color_id) values(1,1);
+insert into autoshop_cars (brand_id, model, year_issue, engin_capacity, max_speed, price) values(1, 'A6', 2011, 3, 250, 17500);
+
+insert into autoshop_car_color (car_id,color_id) values(2,2);
+insert into autoshop_cars (brand_id, model, year_issue, engin_capacity, max_speed, price) values(1, 'A5', 2012, 2, 240, 18700);
+
+insert into autoshop_car_color (car_id,color_id) values(3,2);
+insert into autoshop_cars (brand_id, model, year_issue, engin_capacity, max_speed, price) values(3, '6 Series Gran Coupe 650i', 2015, 4, 250, 75000);
+
+insert into autoshop_car_color (car_id,color_id) values(4,3);
+insert into autoshop_cars (brand_id, model, year_issue, engin_capacity, max_speed, price) values(3,'X5', 2011, 4, 260, 25000);
+
+insert into autoshop_car_color (car_id,color_id) values(5,7);
+insert into autoshop_cars (brand_id, model, year_issue, engin_capacity, max_speed, price) values(5,'Mustang Premium', 2013, 3, 230, 20500);
+
+insert into autoshop_car_color (car_id,color_id) values(6,3);
+insert into autoshop_cars (brand_id, model, year_issue, engin_capacity, max_speed, price) values(7,'CR-V 2.4', 2009, 2, 190, 12700);
+
+insert into autoshop_car_color (car_id,color_id) values(7,3);
+insert into autoshop_cars (brand_id, model, year_issue, engin_capacity, max_speed, price) values(9, 'Sorento', 2013, 2, 190, 17700);
+
+insert into autoshop_car_color (car_id,color_id) values(8,4);
+insert into autoshop_cars (brand_id, model, year_issue, engin_capacity, max_speed, price) values(9, 'Sportage', 2012, 2, 180, 16350);
+
+insert into autoshop_car_color (car_id,color_id) values(9,4);
+insert into autoshop_cars (brand_id, model, year_issue, engin_capacity, max_speed, price) values(10,'GS 430 AT6', 2005, 4,  250, 14900);
+
+insert into autoshop_car_color (car_id,color_id) values(10,3);
+insert into autoshop_cars (brand_id, model, year_issue, engin_capacity, max_speed, price) values(10,'LX 570 Luxury', 2013, 5, 210, 67000);
+
+insert into autoshop_car_color (car_id,color_id) values(11,5);
+insert into autoshop_cars (brand_id, model, year_issue, engin_capacity, max_speed, price) values(15,'Touran', 2007, 2, 200, 8650);
+
