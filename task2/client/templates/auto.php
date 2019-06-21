@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AutoShop</title>
-    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
           integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <!--<link rel="stylesheet" href="css/fontawesome.min.css">-->
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -35,13 +35,16 @@
 <div id="autos" class="gen">
     <div class="container">
         <div class="row centered">
-            <h3>Auto</h3>
+            <h3>Auto Information</h3>
             <div class="col-lg-12">
                 <?php
-                //echo $_SERVER['REQUEST_URI'];
-                echo  $carId;
-                var_dump($carInfoRes);
-
+                //var_dump($carInfoRes);
+                foreach ($carInfoRes as $inf){
+                    foreach($inf as $val){?>
+                        <p><?= $val->key?> - <?= $val->value?></p>
+                    <?}?>
+                   <p><?= $inf->key?> - <?= $inf->value?></p>
+               <? }
                 ?>
 
             </div>
@@ -63,10 +66,7 @@
 </footer>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script type='text/javascript'>
+<script src="js/bootstrap.min.js"></script>
 
-
-</script>
 </body>
 </html>

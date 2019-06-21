@@ -39,7 +39,7 @@
             <div class="col-lg-12">
                 <?php foreach ($cars as $car) {
                     ?>
-                    <a href="templates/auto.php?auto_id=<?= $car[0] ?>">
+                    <a href="?auto_id=<?= $car[0] ?>">
                         <button name="<?= $car[0] ?>" class="btn btn-secondary">
                             <h5><?= $car[2] . " " . $car[1] ?></h5>
                         </button>
