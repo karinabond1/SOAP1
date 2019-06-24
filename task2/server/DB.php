@@ -52,7 +52,7 @@ class DB
             $mysql->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             //select autoshop_cars.model, autoshop_cars.year_issue, autoshop_brand.brand from autoshop_cars inner join autoshop_brand on autoshop_cars.brand_id=autoshop_brand.id
 
-            $selectCarinfo = $mysql->prepare("SELECT  autoshop_brand.brand,autoshop_cars.model, autoshop_cars.year_issue, autoshop_cars.engin_capacity, autoshop_cars.max_speed, autoshop_cars.price FROM autoshop_cars inner join autoshop_brand on autoshop_cars.brand_id=autoshop_brand.id WHERE autoshop_cars.id = " . $id);
+            $selectCarinfo = $mysql->prepare("SELECT  autoshop_cars.id,autoshop_brand.brand,autoshop_cars.model, autoshop_cars.year_issue, autoshop_cars.engin_capacity, autoshop_cars.max_speed, autoshop_cars.price FROM autoshop_cars inner join autoshop_brand on autoshop_cars.brand_id=autoshop_brand.id WHERE autoshop_cars.id = " . $id);
             $selectCarinfo->execute();
             /*$selectCarinfo = $mysql->prepare("SELECT id, brand_id, model, year_issue, engin_capacity, max_speed, price FROM autoshop_cars WHERE id = ".$id);
             $selectCarinfo->execute();*/
@@ -181,6 +181,21 @@ class DB
         }
 
 
+
+    }
+
+    public function sendCarRequest($id,$name, $surname, $payment)
+    {
+        $mysql = new PDO("mysql:host=" . HOST . ";port=" . PORT . ";dbname=" . DATABASE, USER_NAME, USER_PASS);
+        $mysql->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        //$sendCarInfo = $mysql->prepare("INSERT INTO autoshop_client_order VALUES(".$id.",".$name.",".$surname.",".$payment.")");
+        $sendCarInfo = $mysql->prepare("INSERT INTO autoshop_client_order (car_id,name,surname,payment) VALUES(?,?,?,?)");
+        
+        if($sendCarInfo->execute(array($id,$name, $surname, $payment))){
+            return $res;
+        }else{
+            return false;
+        }
 
     }
 }

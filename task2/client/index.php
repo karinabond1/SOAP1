@@ -15,10 +15,22 @@ var_dump($cars);*/
 
 $client = new Client(WSDL_URL);
 
-if($_GET['auto_id']){
+if($_GET['auto_id'] && !$_POST['name']){
     $carInfoRes = $client->getCar($_GET['auto_id']);
     //var_dump($carInfoRes);
     include 'templates/auto.php';
+}if($_GET['auto_id'] && $_POST['name'] && $_POST['surname'] && $_POST['payment']){
+    $id = (int)$_GET['auto_id'];
+    $name = (string)$_POST['name'];
+    $surname = (string)$_POST['surname'];
+    $payment = (string)$_POST['payment'];    
+    $sendRequest = $client->sendCarRequest($id,$name,$surname,$payment);
+    if($sendRequest===true){
+        include 'templates/thank.php';
+    }else{
+        include 'templates/auto.php';
+    }
+    
 }else{
     if($_POST['year_issue']){
         //$searchValues = array('brand'=>$_POST['brand'],'model'=>$_POST['model'],'year_issue'=>$_POST['year_issue'],'engin_capacity'=>$_POST['engin_capacity'],'max_speed'=>$_POST['max_speed'],'color'=>$_POST['color'],'price_from'=>$_POST['price_from'],'price_to'=>$_POST['price_to']);

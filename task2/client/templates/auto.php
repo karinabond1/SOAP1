@@ -41,7 +41,7 @@
                 foreach ($carInfoRes as $inf) {
 
                     foreach ($inf as $val) {
-                        if ($val->key && $val->value) {
+                        if ($val->key && $val->value && $val->key!='id')  {
                             ?>
                             <p><?= $val->key ?> - <?= $val->value ?></p>
                             <?
@@ -64,19 +64,19 @@
         <div class="row centered">
             <h3>Here you can buy an auto!</h3>
             <div class="col-lg-12">
-                <form class="navbar-form navbar-center" role="search" method="post" action="thank.php">
+                <form class="navbar-form navbar-center" role="search" method="post" >
                     <div class="form-group">
                         <input type="text" class="form-control" name="name" placeholder="Name" /required>
                         <input type="text" class="form-control" name="surname" placeholder="Surname"/required><br><br>
-                        <div class="col-lg-6">
-                            <input type="radio" id="money"
-                                   name="contact" value="cash" /required>
-                            <label for="money">Cash</label>
+                        <div class="col-lg-12">
+                            <input type="radio" id="money1"
+                                   name="payment" value="cash" >
+                            <label for="money1">Cash</label>
                             <input type="radio" id="money2"
-                                   name="contact" value="card" /required>
+                                   name="payment" value="card">
                             <label for="money2">Card</label>
                         </div>
-                        <button type="submit" class="btn btn-default">Buy</button>
+                        <a href="?auto_id=<?= $carInfoRes[0][0]->key ?>"><button type="submit" class="btn btn-default">Buy</button></a>
                     </div>
                 </form>
             </div>

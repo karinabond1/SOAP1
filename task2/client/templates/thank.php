@@ -25,7 +25,7 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="http://gfl:8070/SOAP1/task2/client">Home</a></li>
+                <li class="active"><a href="http://192.168.0.15/~user14/SOAP1/task2/client">Home</a></li>
             </ul>
         </div>
     </div>

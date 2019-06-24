@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <definitions name="AutoShop"
-             targetNamespace="http://gfl:8070/SOAP1/task2/server/"
+             targetNamespace="http://192.168.0.15/~user14/SOAP1/task2/server/"
              xmlns="http://schemas.xmlsoap.org/wsdl/"
              xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
              xmlns:tns="http://www.examples.com/wsdl/HelloService.wsdl"
@@ -26,9 +26,7 @@
     </message>
 
     <message name="getDataRequest">
-        <part name="id" type="xsd:int"/>
-        <part name="name" type="xsd:string"/>
-        <part name="model" type="xsd:string"/>
+        <part name="result" type="xsd:string"/>
     </message>
     <message name="getOneDataRequest">
         <part name="id" type="xsd:int"/>
@@ -42,6 +40,12 @@
         <part name="color" type="xsd:string"/>
         <part name="priceFrom" type="xsd:double"/>
         <part name="priceTo" type="xsd:double"/>
+    </message>
+    <message name="sendCarsDataRequest">
+        <part name="id" type="xsd:int"/>
+        <part name="name" type="xsd:string"/>
+        <part name="surname" type="xsd:string"/>
+        <part name="payment" type="xsd:string"/>
     </message>
     <message name="getDataResponse">
         <part name="Result" type="tns:string"/>
@@ -59,17 +63,22 @@
             <input message="tns:getCarsDataRequest"/>
             <output message="tns:getCarsResponse"/>
         </operation>
+        <operation name="sendCarRequest">
+            <input message="tns:sendCarsDataRequest"/>
+            <output message="tns:getDataRequest"/>
+        </operation>
     </portType>
 
     <binding name="Binding" type="tns:PortType">
         <operation name="getAllCars"/>
         <operation name="getCarInfo"/>
         <operation name="getSearchResult"/>
+        <operation name="sendCarRequest"/>
     </binding>
 
     <service name="CarsService">
         <port name="CarsPort" binding="Binding">
-            <soap:address location="http://gfl:8070/SOAP1/task2/server/index.php"/>
+            <soap:address location="http://192.168.0.15/~user14/SOAP1/task2/server/index.php"/>
         </port>
     </service>
 </definitions>

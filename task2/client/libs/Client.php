@@ -43,7 +43,7 @@ class Client
         //echo '<br><br><br>';
         //var_dump($search->item);
         if (!$search) {
-            return "There is no cars with this parameters. Try again!";
+            return "There is no cars with this parameters. Please, try again!";
         } else {
             foreach ($search->item as $item) {
                 if(count($item->item)>1){
@@ -67,6 +67,17 @@ class Client
         }
 
 
+    }
+
+    public function sendCarRequest($id,$name, $surname, $payment)
+    {
+        $send = $this->client->sendCarRequest($id,$name, $surname, $payment);
+        if (!$send) {
+            return "There is some problems with sending your data. Please, try again!";
+        } else {
+            return $send;
+        }
+        
     }
 
 }
