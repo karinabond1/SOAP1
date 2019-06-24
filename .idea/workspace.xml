@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68ea9aae-453c-4bc0-a310-1daf49fc4f9a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/task2/client/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task2/client/css/fontawesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task2/client/css/main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task2/client/fonts/glyphicons-halflings-regular.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task2/client/fonts/glyphicons-halflings-regular.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task2/client/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/task2/client/templates/auto.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/client/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/task2/client/config.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task2/client/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/task2/client/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/client/libs/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/task2/client/libs/Client.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task2/client/templates/auto.php" beforeDir="false" afterPath="$PROJECT_DIR$/task2/client/templates/auto.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task2/client/templates/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/task2/client/templates/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task2/server/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/task2/server/DB.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task2/server/autoshop_new.wsdl" beforeDir="false" afterPath="$PROJECT_DIR$/task2/server/autoshop_new.wsdl" afterDir="false" />
@@ -24,14 +21,23 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.49343544">
+    <splitter split-orientation="horizontal" split-proportion="0.39658847">
       <split-first>
         <leaf>
-          <file leaf-file-name="autoshop_new.wsdl" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/task2/server/autoshop_new.wsdl">
+          <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/task2/client/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="717">
-                  <caret line="56" column="51" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
+                <state relative-caret-position="340">
+                  <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Client.php" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/task2/client/libs/Client.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="241">
+                  <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
                 </state>
               </provider>
             </entry>
@@ -39,17 +45,8 @@
           <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/task2/server/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/task2/client/index.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="15" column="26" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="26" />
+                <state relative-caret-position="442">
+                  <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
                 </state>
               </provider>
             </entry>
@@ -57,17 +54,17 @@
           <file leaf-file-name="DB.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/task2/server/DB.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="15" column="66" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
+                <state relative-caret-position="601">
+                  <caret line="173" column="37" selection-start-line="173" selection-start-column="37" selection-end-line="173" selection-end-column="37" />
                 </state>
               </provider>
             </entry>
           </file>
           <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/task2/server/config.php">
+            <entry file="file://$PROJECT_DIR$/task2/client/config.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="119">
-                  <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+                <state relative-caret-position="51">
+                  <caret line="3" column="62" lean-forward="true" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
                 </state>
               </provider>
             </entry>
@@ -76,20 +73,29 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+          <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/task2/client/templates/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="561">
-                  <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
+                <state relative-caret-position="482">
+                  <caret line="70" column="33" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="auto.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="auto.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/task2/client/templates/auto.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="640">
-                  <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+                <state relative-caret-position="255">
+                  <caret line="28" column="93" selection-start-line="28" selection-start-column="93" selection-end-line="28" selection-end-column="93" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="autoshop_new.wsdl" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/task2/server/autoshop_new.wsdl">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="646">
+                  <caret line="55" column="41" lean-forward="true" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
                 </state>
               </provider>
             </entry>
@@ -104,13 +110,15 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/task2/server/autoshop_new.wsdl" />
-        <option value="$PROJECT_DIR$/task2/server/index.php" />
         <option value="$PROJECT_DIR$/task2/server/config.php" />
+        <option value="$PROJECT_DIR$/task2/client/config.php" />
+        <option value="$PROJECT_DIR$/task2/server/autoshop_new.wsdl" />
         <option value="$PROJECT_DIR$/task2/server/DB.php" />
-        <option value="$PROJECT_DIR$/task2/client/templates/index.php" />
+        <option value="$PROJECT_DIR$/task2/server/index.php" />
+        <option value="$PROJECT_DIR$/task2/client/libs/Client.php" />
         <option value="$PROJECT_DIR$/task2/client/index.php" />
         <option value="$PROJECT_DIR$/task2/client/templates/auto.php" />
+        <option value="$PROJECT_DIR$/task2/client/templates/index.php" />
       </list>
     </option>
   </component>
@@ -123,8 +131,8 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="953" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -157,7 +165,7 @@
               <item name="SOAP1" type="462c0819:PsiDirectoryNode" />
               <item name="task2" type="462c0819:PsiDirectoryNode" />
               <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
+              <item name="libs" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SOAP1" type="b2602c69:ProjectViewProjectNode" />
@@ -211,18 +219,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561115027752</updated>
-      <workItem from="1561115029155" duration="5219000" />
+      <workItem from="1561115029155" duration="23730000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5219000" />
+    <option name="totallyTimeSpent" value="23730000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.24945295" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.12686567" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -250,13 +258,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/task2/server/autoshop_new.wsdl">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="717">
-          <caret line="56" column="51" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task2/client/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -265,43 +266,64 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/task2/server/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="2" lean-forward="true" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
+        <state relative-caret-position="85">
+          <caret line="5" column="27" selection-start-line="5" selection-start-column="27" selection-end-line="5" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task2/server/DB.php">
+    <entry file="file://$PROJECT_DIR$/task2/server/autoshop_new.wsdl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="66" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
+        <state relative-caret-position="646">
+          <caret line="55" column="41" lean-forward="true" selection-start-line="55" selection-start-column="41" selection-end-line="55" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2/client/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="62" lean-forward="true" selection-start-line="3" selection-start-column="62" selection-end-line="3" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/task2/server/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
+        <state relative-caret-position="442">
+          <caret line="26" column="20" selection-start-line="26" selection-start-column="20" selection-end-line="26" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task2/client/templates/index.php">
+    <entry file="file://$PROJECT_DIR$/task2/server/DB.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="42" column="6" selection-start-line="42" selection-start-column="6" selection-end-line="42" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task2/client/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="26" selection-start-line="15" selection-start-column="15" selection-end-line="15" selection-end-column="26" />
+        <state relative-caret-position="601">
+          <caret line="173" column="37" selection-start-line="173" selection-start-column="37" selection-end-line="173" selection-end-column="37" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/task2/client/templates/auto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="42" column="36" selection-start-line="42" selection-start-column="36" selection-end-line="42" selection-end-column="36" />
+        <state relative-caret-position="255">
+          <caret line="28" column="93" selection-start-line="28" selection-start-column="93" selection-end-line="28" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2/client/libs/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2/client/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="33" lean-forward="true" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2/client/templates/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="70" column="33" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
         </state>
       </provider>
     </entry>

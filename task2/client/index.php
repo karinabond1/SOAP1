@@ -20,6 +20,21 @@ if($_GET['auto_id']){
     //var_dump($carInfoRes);
     include 'templates/auto.php';
 }else{
+    if($_POST['year_issue']){
+        //$searchValues = array('brand'=>$_POST['brand'],'model'=>$_POST['model'],'year_issue'=>$_POST['year_issue'],'engin_capacity'=>$_POST['engin_capacity'],'max_speed'=>$_POST['max_speed'],'color'=>$_POST['color'],'price_from'=>$_POST['price_from'],'price_to'=>$_POST['price_to']);
+        $brand = empty($_POST['brand']) ? '' : trim($_POST['brand']);
+        $model = empty($_POST['model']) ? '' : trim($_POST['model']);
+        $year = empty($_POST['year_issue']) ? 0 : $_POST['year_issue'];
+        $engine = empty($_POST['engin_capacity']) ? 0 : $_POST['engin_capacity'];
+        $speed = empty($_POST['max_speed']) ? 0 : $_POST['max_speed'];
+        $color = empty($_POST['color']) ? '' : trim($_POST['color']);
+        $priceFrom = empty($_POST['price_from']) ? 0 : $_POST['price_from'];
+        $priceTo = empty($_POST['price_to']) ? 0 : $_POST['price_to'];
+        $search = $client->getSearchResult($brand,$model,$year,$engine,$speed,$color,$priceFrom,$priceTo);
+        //echo '<br><br>';
+        //var_dump($search);
+
+    }
     $cars = $client->getCars();
     include 'templates/index.php';
 }

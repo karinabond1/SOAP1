@@ -26,8 +26,52 @@
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="#">Home</a></li>
+                <li class="active"><a href="#search">Search</a></li>
                 <li class="active"><a href="#autos">Autos</a></li>
             </ul>
+        </div>
+    </div>
+</div>
+
+<div id="search" class="gen">
+    <div class="container">
+        <div class="row centered">
+            <h3>Search Auto for yourself</h3>
+            <div class="col-lg-12">
+                <form class="navbar-form navbar-center" role="search" method="post">
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="brand" placeholder="Brand">
+                        <input type="text" class="form-control" name="model" placeholder="Model">
+                        <input type="text" class="form-control" name="year_issue" placeholder="Year issue" required>
+                        <input type="text" class="form-control" name="engin_capacity" placeholder="Engine capacity">
+                        <input type="text" class="form-control" name="max_speed" placeholder="Max speed">
+                        <input type="text" class="form-control" name="color" placeholder="Color">
+                        <input type="text" class="form-control" name="price_from" placeholder="Price From">
+                        <input type="text" class="form-control" name="price_to" placeholder="Price to">
+                        <button type="submit" class="btn btn-default">Search</button>
+                    </div>
+                </form>
+
+
+                <?php
+
+                if (isset($_POST['year_issue']) && is_array($search)) {
+
+                    foreach ($search as $car) {
+                        ?>
+                        <a href="?auto_id=<?= $car[0] ?>">
+                            <button name="<?= $car[0] ?>" class="btn btn-secondary">
+                                <h5><?= $car[2] . " " . $car[1] ?></h5>
+                            </button>
+
+                        </a>
+                        <?php
+                    }
+                }else{?>
+                    <p><?=$search?></p>
+               <? }
+                ?>
+            </div>
         </div>
     </div>
 </div>
@@ -37,7 +81,9 @@
         <div class="row centered">
             <h3>Autos</h3>
             <div class="col-lg-12">
-                <?php foreach ($cars as $car) {
+                <?php
+
+                foreach ($cars as $car) {
                     ?>
                     <a href="?auto_id=<?= $car[0] ?>">
                         <button name="<?= $car[0] ?>" class="btn btn-secondary">
@@ -47,6 +93,7 @@
                     </a>
                     <?php
                 }
+
 
                 ?>
 

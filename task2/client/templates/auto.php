@@ -21,12 +21,12 @@
                 <span class="icon-bar"></span>
             </button>
             <a class="navbar-brand" href="#">AUT<i class="far fa-circle" aria-hidden="true"></i>SH<i
-                    class="far fa-circle"></i>P </a>
+                        class="far fa-circle"></i>P </a>
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
                 <li class="active"><a href="http://gfl:8070/SOAP1/task2/client">Home</a></li>
-                <li class="active"><a href="#autos">Autos</a></li>
+                <li class="active"><a href="http://gfl:8070/SOAP1/task2/client">Home</a></li>
             </ul>
         </div>
     </div>
@@ -39,12 +39,19 @@
             <div class="col-lg-12">
                 <?php
                 //var_dump($carInfoRes);
-                foreach ($carInfoRes as $inf){
-                    foreach($inf as $val){?>
-                        <p><?= $val->key?> - <?= $val->value?></p>
-                    <?}?>
-                   <p><?= $inf->key?> - <?= $inf->value?></p>
-               <? }
+                foreach ($carInfoRes as $inf) {
+
+                        foreach ($inf as $val) {
+                            if ($val->key && $val->value) {
+                                ?>
+                                <p><?= $val->key ?> - <?= $val->value ?></p>
+                                <?
+                            }
+                        }if ($inf->key && $inf->value) {?>
+
+                        <p><?= $inf->key ?> - <?= $inf->value ?></p>
+                    <? }
+                }
                 ?>
 
             </div>
