@@ -2,16 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="68ea9aae-453c-4bc0-a310-1daf49fc4f9a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/client/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/task2/client/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/client/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/task2/client/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/client/libs/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/task2/client/libs/Client.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task2/client/templates/auto.php" beforeDir="false" afterPath="$PROJECT_DIR$/task2/client/templates/auto.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/client/templates/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/task2/client/templates/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/server/DB.php" beforeDir="false" afterPath="$PROJECT_DIR$/task2/server/DB.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/server/autoshop_new.wsdl" beforeDir="false" afterPath="$PROJECT_DIR$/task2/server/autoshop_new.wsdl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/server/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/task2/server/config.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task2/server/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/task2/server/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,7 +45,7 @@
           <file leaf-file-name="DB.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/task2/server/DB.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="601">
+                <state relative-caret-position="856">
                   <caret line="173" column="37" selection-start-line="173" selection-start-column="37" selection-end-line="173" selection-end-column="37" />
                 </state>
               </provider>
@@ -73,11 +64,11 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/task2/client/templates/index.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="482">
-                  <caret line="70" column="33" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
+                <state relative-caret-position="204">
+                  <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
                 </state>
               </provider>
             </entry>
@@ -85,8 +76,17 @@
           <file leaf-file-name="auto.php" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/task2/client/templates/auto.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="28" column="93" selection-start-line="28" selection-start-column="93" selection-end-line="28" selection-end-column="93" />
+                <state relative-caret-position="204">
+                  <caret line="64" column="35" selection-end-line="103" selection-end-column="7" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="thank.php" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/task2/client/templates/thank.php">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="377">
+                  <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
                 </state>
               </provider>
             </entry>
@@ -117,8 +117,9 @@
         <option value="$PROJECT_DIR$/task2/server/index.php" />
         <option value="$PROJECT_DIR$/task2/client/libs/Client.php" />
         <option value="$PROJECT_DIR$/task2/client/index.php" />
-        <option value="$PROJECT_DIR$/task2/client/templates/auto.php" />
         <option value="$PROJECT_DIR$/task2/client/templates/index.php" />
+        <option value="$PROJECT_DIR$/task2/client/templates/auto.php" />
+        <option value="$PROJECT_DIR$/task2/client/templates/thank.php" />
       </list>
     </option>
   </component>
@@ -219,18 +220,18 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1561115027752</updated>
-      <workItem from="1561115029155" duration="23730000" />
+      <workItem from="1561115029155" duration="25290000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23730000" />
+    <option name="totallyTimeSpent" value="25290000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.12686567" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12686567" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
@@ -292,24 +293,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/task2/server/DB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="601">
-          <caret line="173" column="37" selection-start-line="173" selection-start-column="37" selection-end-line="173" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/task2/client/templates/auto.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="28" column="93" selection-start-line="28" selection-start-column="93" selection-end-line="28" selection-end-column="93" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/task2/client/libs/Client.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
           <caret line="32" column="28" lean-forward="true" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2/server/DB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="856">
+          <caret line="173" column="37" selection-start-line="173" selection-start-column="37" selection-end-line="173" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -322,8 +316,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/task2/client/templates/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="70" column="33" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
+        <state relative-caret-position="204">
+          <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/html5/web-forms.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="81" column="14" selection-start-line="81" selection-start-column="14" selection-end-line="81" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2/client/templates/auto.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="64" column="35" selection-end-line="103" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/task2/client/templates/thank.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
         </state>
       </provider>
     </entry>

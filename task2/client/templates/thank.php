@@ -34,55 +34,12 @@
 <div id="autos" class="gen">
     <div class="container">
         <div class="row centered">
-            <h3>Auto Information</h3>
-            <div class="col-lg-12">
-                <?php
-                //var_dump($carInfoRes);
-                foreach ($carInfoRes as $inf) {
-
-                    foreach ($inf as $val) {
-                        if ($val->key && $val->value) {
-                            ?>
-                            <p><?= $val->key ?> - <?= $val->value ?></p>
-                            <?
-                        }
-                    }
-                    if ($inf->key && $inf->value) { ?>
-
-                        <p><?= $inf->key ?> - <?= $inf->value ?></p>
-                    <? }
-                }
-                ?>
-
-            </div>
+            <h3>Thank you for buying the car!</h3>
         </div>
     </div>
 </div>
 
-<div id="search" class="gen">
-    <div class="container">
-        <div class="row centered">
-            <h3>Here you can buy an auto!</h3>
-            <div class="col-lg-12">
-                <form class="navbar-form navbar-center" role="search" method="post" action="thank.php">
-                    <div class="form-group">
-                        <input type="text" class="form-control" name="name" placeholder="Name" /required>
-                        <input type="text" class="form-control" name="surname" placeholder="Surname"/required><br><br>
-                        <div class="col-lg-6">
-                            <input type="radio" id="money"
-                                   name="contact" value="cash" /required>
-                            <label for="money">Cash</label>
-                            <input type="radio" id="money2"
-                                   name="contact" value="card" /required>
-                            <label for="money2">Card</label>
-                        </div>
-                        <button type="submit" class="btn btn-default">Buy</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
+
 
 
 <footer>
