@@ -5,7 +5,7 @@ ini_set('soap.wsdl_cache_ttl', 0);
 include('config.php');
 include('DB.php');
 
-$server = new SoapServer("http://192.168.0.15/~user14/SOAP1/task2/server/autoshop_new.wsdl");
+$server = new SoapServer("http://gfl:8070/SOAP1/task2/server/autoshop_new.wsdl");
 $server->setClass("DB");
 $server->handle();
 
@@ -26,5 +26,5 @@ $search = $autoshop->getSearchResult($brand,$model,$year,$engine,$speed,$color,$
 //var_dump($search);
 //echo $search;
 
-$carSendInfo = $autoshop->sendCarRequest("1","Ka","hoho","cash");
+$carSendInfo = $autoshop->sendCarRequest("1","Ka","hoho","card");
 echo $carSendInfo;*/

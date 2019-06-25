@@ -38,20 +38,25 @@
             <div class="col-lg-12">
                 <?php
                 //var_dump($carInfoRes);
-                foreach ($carInfoRes as $inf) {
+                if (is_array($carInfoRes)) {
+                    foreach ($carInfoRes as $inf) {
 
-                    foreach ($inf as $val) {
-                        if ($val->key && $val->value && $val->key!='id')  {
-                            ?>
-                            <p><?= $val->key ?> - <?= $val->value ?></p>
-                            <?
+                        foreach ($inf as $val) {
+                            if ($val->key && $val->value && $val->key != 'id') {
+                                ?>
+                                <p><?= $val->key ?> - <?= $val->value ?></p>
+                                <?
+                            }
                         }
-                    }
-                    if ($inf->key && $inf->value) { ?>
+                        if ($inf->key && $inf->value) { ?>
 
-                        <p><?= $inf->key ?> - <?= $inf->value ?></p>
-                    <? }
-                }
+                            <p><?= $inf->key ?> - <?= $inf->value ?></p>
+                        <? }
+                    }
+                } else {
+                    ?>
+                    <p><?= $carInfoRes ?></p>
+                <? }
                 ?>
 
             </div>
@@ -63,20 +68,23 @@
     <div class="container">
         <div class="row centered">
             <h3>Here you can buy an auto!</h3>
+            <p><?= $sendRequest ?></p>
             <div class="col-lg-12">
-                <form class="navbar-form navbar-center" role="search" method="post" >
+                <form class="navbar-form navbar-center" role="search" method="post">
                     <div class="form-group">
                         <input type="text" class="form-control" name="name" placeholder="Name" /required>
                         <input type="text" class="form-control" name="surname" placeholder="Surname"/required><br><br>
                         <div class="col-lg-12">
                             <input type="radio" id="money1"
-                                   name="payment" value="cash" >
+                                   name="payment" value="cash">
                             <label for="money1">Cash</label>
                             <input type="radio" id="money2"
                                    name="payment" value="card">
                             <label for="money2">Card</label>
                         </div>
-                        <a href="?auto_id=<?= $carInfoRes[0][0]->key ?>"><button type="submit" class="btn btn-default">Buy</button></a>
+                        <a href="?auto_id=<?= $carInfoRes[0][0]->key ?>">
+                            <button type="submit" class="btn btn-default">Buy</button>
+                        </a>
                     </div>
                 </form>
             </div>

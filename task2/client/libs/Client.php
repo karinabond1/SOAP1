@@ -11,28 +11,35 @@ class Client
 
     public function getCars()
     {
+        $carsWsdl = $this->client->getAllCars();
         $cars = array();
-        foreach ($this->client->getAllCars()->item as $value) {
-            $temp = array();
-            array_push($temp, $value->item[0]->value);
-            array_push($temp, $value->item[1]->value);
-            array_push($temp, $value->item[2]->value);
-            array_push($cars, $temp);
+        if(!$carsWsdl){
+            return "There is some problems. Please, try again later!";
+        }else{
+            foreach ($carsWsdl->item as $value) {
+                $temp = array();
+                array_push($temp, $value->item[0]->value);
+                array_push($temp, $value->item[1]->value);
+                array_push($temp, $value->item[2]->value);
+                array_push($cars, $temp);
+            }
+            return $cars;
         }
-        return $cars;
+
     }
 
     public function getCar($id)
     {
-        if ($id) {
-            $carInfo = $this->client->getCarInfo($id);
+        $carInfo = $this->client->getCarInfo($id);
+
+        //var_dump($carInfoRes);
+        if (!$carInfo) {
+            return "There is some problems. Please, try again!";
+        } else {
             $carInfoRes = array();
             array_push($carInfoRes, $carInfo->item[0]->item);
             array_push($carInfoRes, $carInfo->item[1]->item);
-            //var_dump($carInfoRes);
             return $carInfoRes;
-        } else {
-            return "error";
         }
     }
 
@@ -46,14 +53,14 @@ class Client
             return "There is no cars with this parameters. Please, try again!";
         } else {
             foreach ($search->item as $item) {
-                if(count($item->item)>1){
+                if (count($item->item) > 1) {
                     $temp = array();
                     array_push($temp, $item->item[0]->value);
                     array_push($temp, $item->item[1]->value);
                     array_push($temp, $item->item[2]->value);
                     array_push($searchResult, $temp);
                     unset($temp);
-                }else{
+                } else {
                     $temp = array();
                     array_push($temp, $item[0]->value);
                     array_push($temp, $item[1]->value);
@@ -69,15 +76,22 @@ class Client
 
     }
 
-    public function sendCarRequest($id,$name, $surname, $payment)
+    public function sendCarRequest($id, $name, $surname, $payment)
     {
-        $send = $this->client->sendCarRequest($id,$name, $surname, $payment);
+        $send = true;
+        $send = $this->client->sendCarRequest($id, $name, $surname, $payment);
+        echo '<br><br><br>';
+        if ($send === true) {
+            echo "++";
+        } else {
+            echo "---";
+        }
         if (!$send) {
             return "There is some problems with sending your data. Please, try again!";
         } else {
-            return $send;
+            return true;
         }
-        
+
     }
 
 }

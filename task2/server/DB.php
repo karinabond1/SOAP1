@@ -189,10 +189,13 @@ class DB
         $mysql = new PDO("mysql:host=" . HOST . ";port=" . PORT . ";dbname=" . DATABASE, USER_NAME, USER_PASS);
         $mysql->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         //$sendCarInfo = $mysql->prepare("INSERT INTO autoshop_client_order VALUES(".$id.",".$name.",".$surname.",".$payment.")");
-        $sendCarInfo = $mysql->prepare("INSERT INTO autoshop_client_order (car_id,name,surname,payment) VALUES(?,?,?,?)");
-        
-        if($sendCarInfo->execute(array($id,$name, $surname, $payment))){
-            return $res;
+        $sendCarInfo = $mysql->prepare("INSERT INTO autoshop_client_order (car_id,name,surname,payment) VALUES(?,?,?,?);");
+        $par[] = $id;
+        $par[] = $name;
+        $par[] = $surname;
+        $par[] = $payment;
+        if($sendCarInfo->execute($par)){
+            return true;
         }else{
             return false;
         }

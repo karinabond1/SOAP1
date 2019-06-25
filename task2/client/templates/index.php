@@ -67,9 +67,10 @@
                         </a>
                         <?php
                     }
-                }else{?>
-                    <p><?=$search?></p>
-               <? }
+                } else {
+                    ?>
+                    <p><?= $search ?></p>
+                <? }
                 ?>
             </div>
         </div>
@@ -80,20 +81,23 @@
     <div class="container">
         <div class="row centered">
             <h3>Autos</h3>
+
             <div class="col-lg-12">
                 <?php
+                if (is_array($cars)) {
+                    foreach ($cars as $car) {
+                        ?>
+                        <a href="?auto_id=<?= $car[0] ?>">
+                            <button name="<?= $car[0] ?>" class="btn btn-secondary">
+                                <h5><?= $car[2] . " " . $car[1] ?></h5>
+                            </button>
 
-                foreach ($cars as $car) {
-                    ?>
-                    <a href="?auto_id=<?= $car[0] ?>">
-                        <button name="<?= $car[0] ?>" class="btn btn-secondary">
-                            <h5><?= $car[2] . " " . $car[1] ?></h5>
-                        </button>
-
-                    </a>
-                    <?php
-                }
-
+                        </a>
+                        <?php
+                    }
+                }else{?>
+                    <p><?= $cars ?></p>
+                <?}
 
                 ?>
 
