@@ -42,12 +42,12 @@
                     <div class="form-group">
                         <input type="text" class="form-control" name="brand" placeholder="Brand">
                         <input type="text" class="form-control" name="model" placeholder="Model">
-                        <input type="text" class="form-control" name="year_issue" placeholder="Year issue" required>
-                        <input type="text" class="form-control" name="engin_capacity" placeholder="Engine capacity">
-                        <input type="text" class="form-control" name="max_speed" placeholder="Max speed">
+                        <input type="number" class="form-control" name="year_issue" placeholder="Year issue" required>
+                        <input type="number" class="form-control" name="engin_capacity" placeholder="Engine capacity">
+                        <input type="number" class="form-control" name="max_speed" placeholder="Max speed">
                         <input type="text" class="form-control" name="color" placeholder="Color">
-                        <input type="text" class="form-control" name="price_from" placeholder="Price From">
-                        <input type="text" class="form-control" name="price_to" placeholder="Price to">
+                        <input type="number" class="form-control" name="price_from" placeholder="Price From">
+                        <input type="number" class="form-control" name="price_to" placeholder="Price to">
                         <button type="submit" class="btn btn-default">Search</button>
                     </div>
                 </form>

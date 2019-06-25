@@ -184,21 +184,23 @@ class DB
 
     }
 
-    public function sendCarRequest($id,$name, $surname, $payment)
+    public function getCarRequestBuy($car_id,$name, $surname, $payment)
     {
+        $res = array();
         $mysql = new PDO("mysql:host=" . HOST . ";port=" . PORT . ";dbname=" . DATABASE, USER_NAME, USER_PASS);
         $mysql->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         //$sendCarInfo = $mysql->prepare("INSERT INTO autoshop_client_order VALUES(".$id.",".$name.",".$surname.",".$payment.")");
         $sendCarInfo = $mysql->prepare("INSERT INTO autoshop_client_order (car_id,name,surname,payment) VALUES(?,?,?,?);");
-        $par[] = $id;
+        $par[] = $car_id;
         $par[] = $name;
         $par[] = $surname;
         $par[] = $payment;
-        if($sendCarInfo->execute($par)){
-            return true;
+        $res = $sendCarInfo->execute($par);
+        if($res){
+            return 'yes';
         }else{
-            return false;
+            return 'no';
         }
-
+        
     }
 }

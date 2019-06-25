@@ -32,7 +32,6 @@ class Client
     {
         $carInfo = $this->client->getCarInfo($id);
 
-        //var_dump($carInfoRes);
         if (!$carInfo) {
             return "There is some problems. Please, try again!";
         } else {
@@ -47,8 +46,7 @@ class Client
     {
         $searchResult = array();
         $search = $this->client->getSearchResult($brand, $model, $year, $engine, $speed, $color, $priceFrom, $priceTo);
-        //echo '<br><br><br>';
-        //var_dump($search->item);
+        
         if (!$search) {
             return "There is no cars with this parameters. Please, try again!";
         } else {
@@ -76,22 +74,17 @@ class Client
 
     }
 
-    public function sendCarRequest($id, $name, $surname, $payment)
+    public function getCarRequest($car_id, $name, $surname, $payment)
     {
-        $send = true;
-        $send = $this->client->sendCarRequest($id, $name, $surname, $payment);
-        echo '<br><br><br>';
-        if ($send === true) {
-            echo "++";
-        } else {
-            echo "---";
-        }
-        if (!$send) {
+        $answer = $this->client->getCarRequestBuy($car_id, $name, $surname, $payment);
+        
+        
+        if (!$answer) {
             return "There is some problems with sending your data. Please, try again!";
         } else {
             return true;
         }
-
+        
     }
 
 }

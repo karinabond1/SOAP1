@@ -25,7 +25,7 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="http://gfl:8070/SOAP1/task2/client">Home</a></li>
+                <li class="active"><a href="http://192.168.0.15/~user14/SOAP1/task2/client">Home</a></li>
             </ul>
         </div>
     </div>
@@ -68,7 +68,7 @@
     <div class="container">
         <div class="row centered">
             <h3>Here you can buy an auto!</h3>
-            <p><?= $sendRequest ?></p>
+            <p><?= $sendRequest?></p>
             <div class="col-lg-12">
                 <form class="navbar-form navbar-center" role="search" method="post">
                     <div class="form-group">
@@ -76,10 +76,10 @@
                         <input type="text" class="form-control" name="surname" placeholder="Surname"/required><br><br>
                         <div class="col-lg-12">
                             <input type="radio" id="money1"
-                                   name="payment" value="cash">
+                                   name="payment" value="cash" /required>
                             <label for="money1">Cash</label>
                             <input type="radio" id="money2"
-                                   name="payment" value="card">
+                                   name="payment" value="card" /required>
                             <label for="money2">Card</label>
                         </div>
                         <a href="?auto_id=<?= $carInfoRes[0][0]->key ?>">
