@@ -15,19 +15,26 @@ if($_GET['auto_id'] && !$_POST['name']){
     include 'templates/auto.php';
 }if($_GET['auto_id'] && $_POST['name'] && $_POST['surname']){
     $carInfoRes = $client->getCar($_GET['auto_id']);
-    $car_id = (int)$_GET['auto_id'];
-    $name = (string)$_POST['name'];
-    $surname = (string)$_POST['surname'];
-    $payment = (string)$_POST['payment'];
-
-    $sendRequest = $client->getCarRequest($car_id,$name,$surname,$payment);
-    
-    
-    if($sendRequest===true){
-        include 'templates/thank.php';
-    }else{
+    if(stristr($_POST['name']," ")||stristr($_POST['surname']," ")){
+        $sendRequest = "There are some spaces in the fields. Please, write again your name or surname!";
         include 'templates/auto.php';
+    }else{
+        $car_id = (int)$_GET['auto_id'];
+        $name = (string)$_POST['name'];
+        $surname = (string)$_POST['surname'];
+        $payment = (string)$_POST['payment'];
+
+        $sendRequest = $client->getCarRequest($car_id,$name,$surname,$payment);
+
+
+        if($sendRequest===true){
+            include 'templates/thank.php';
+        }else{
+            include 'templates/auto.php';
+        }
     }
+
+
     
 }else{
     if($_POST['year_issue']&& !$_GET['auto_id']){

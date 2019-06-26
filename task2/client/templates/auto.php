@@ -25,7 +25,7 @@
         </div>
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="http://192.168.0.15/~user14/SOAP1/task2/client">Home</a></li>
+                <li class="active"><a href="http://gfl:8070/SOAP1/task2/client">Home</a></li>
             </ul>
         </div>
     </div>
@@ -68,7 +68,7 @@
     <div class="container">
         <div class="row centered">
             <h3>Here you can buy an auto!</h3>
-            <p><?= $sendRequest?></p>
+            <p><?= $sendRequest ?></p>
             <div class="col-lg-12">
                 <form class="navbar-form navbar-center" role="search" method="post">
                     <div class="form-group">
