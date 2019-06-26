@@ -13,9 +13,13 @@ if($_GET['auto_id'] && !$_POST['name']){
     $carInfoRes = $client->getCar($_GET['auto_id']);
     
     include 'templates/auto.php';
-}if($_GET['auto_id'] && $_POST['name'] && $_POST['surname']){
+}elseif($_GET['auto_id'] && (empty($_POST['name']) || empty($_POST['surname']) || empty($_POST['payment']))){
     $carInfoRes = $client->getCar($_GET['auto_id']);
-    if(stristr($_POST['name']," ")||stristr($_POST['surname']," ")){
+    $sendRequest = "You need to feel all the fields!";
+    include 'templates/auto.php';
+}elseif($_GET['auto_id'] && $_POST['name'] && $_POST['surname']){
+    $carInfoRes = $client->getCar($_GET['auto_id']);
+    if(stristr($_POST['name']," ") || stristr($_POST['surname']," ")){
         $sendRequest = "There are some spaces in the fields. Please, write again your name or surname!";
         include 'templates/auto.php';
     }else{
@@ -23,9 +27,8 @@ if($_GET['auto_id'] && !$_POST['name']){
         $name = (string)$_POST['name'];
         $surname = (string)$_POST['surname'];
         $payment = (string)$_POST['payment'];
-
+        
         $sendRequest = $client->getCarRequest($car_id,$name,$surname,$payment);
-
 
         if($sendRequest===true){
             include 'templates/thank.php';

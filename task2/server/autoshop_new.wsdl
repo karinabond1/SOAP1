@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <definitions name="AutoShop"
-             targetNamespace="http://gfl:8070/SOAP1/task2/server/"
+             targetNamespace="http://192.168.0.15/~user14/SOAP1/task2/server/"
              xmlns="http://schemas.xmlsoap.org/wsdl/"
              xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
              xmlns:tns="http://www.examples.com/wsdl/HelloService.wsdl"
@@ -81,7 +81,7 @@
 
     <service name="CarsService">
         <port name="CarsPort" binding="Binding">
-            <soap:address location="http://gfl:8070/SOAP1/task2/server/index.php"/>
+            <soap:address location="http://192.168.0.15/~user14/SOAP1/task2/server/index.php"/>
         </port>
     </service>
 </definitions>

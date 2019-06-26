@@ -40,14 +40,14 @@
             <div class="col-lg-12">
                 <form class="navbar-form navbar-center" role="search" method="post">
                     <div class="form-group">
-                        <p><label for="money1">Brand</label> <input type="text" class="form-control" value="<?= $brand?>" name="brand" placeholder="Brand"></p>
-                        <p><label for="money1">Model</label>  <input type="text" class="form-control" value="<?= $model?>" name="model" placeholder="Model"></p>
-                        <p><label for="money1">Year issue</label> <input type="number" class="form-control" value="<?= $year?>" name="year_issue" placeholder="Year issue" required></p>
-                        <p><label for="money1">Engine capacity</label> <input type="number" class="form-control" value="<?= $engine?>" name="engin_capacity" placeholder="Engine capacity"></p>
-                        <p><label for="money1">Max speed</label> <input type="number" class="form-control" value="<?= $speed?>" name="max_speed" placeholder="Max speed"></p>
-                        <p><label for="money1">Color</label>  <input type="text" class="form-control" value="<?= $color?>" name="color" placeholder="Color"></p>
-                        <p><label for="money1">Price From</label>  <input type="number" class="form-control" value="<?= $priceFrom?>" name="price_from" placeholder="Price From"></p>
-                        <p><label for="money1">Price To</label>  <input type="number" class="form-control" value="<?= $priceTo?>" name="price_to" placeholder="Price To"></p>
+                        <input type="text" class="form-control" value="<?= $brand?>" name="brand" placeholder="Brand">
+                        <input type="text" class="form-control" value="<?= $model?>" name="model" placeholder="Model">
+                        <input type="number" class="form-control" value="<?= $year?>" name="year_issue" placeholder="Year issue" required>
+                        <input type="number" class="form-control" value="<?= $engine?>" name="engin_capacity" placeholder="Engine capacity">
+                        <input type="number" class="form-control" value="<?= $speed?>" name="max_speed" placeholder="Max speed">
+                        <input type="text" class="form-control" value="<?= $color?>" name="color" placeholder="Color">
+                        <input type="number" class="form-control" value="<?= $priceFrom?>" name="price_from" placeholder="Price From">
+                        <input type="number" class="form-control" value="<?= $priceTo?>" name="price_to" placeholder="Price To">
                         <button type="submit" class="btn btn-default">Search</button>
                     </div>
                 </form>
@@ -60,7 +60,7 @@
                     foreach ($search as $car) {
                         ?>
                         <a href="?auto_id=<?= $car[0] ?>">
-                            <button name="<?= $car[0] ?>" class="btn btn-secondary">
+                            <button name="btn_car" class="btn btn-secondary">
                                 <h5><?= $car[2] . " " . $car[1] ?></h5>
                             </button>
 
@@ -88,7 +88,7 @@
                     foreach ($cars as $car) {
                         ?>
                         <a href="?auto_id=<?= $car[0] ?>">
-                            <button name="<?= $car[0] ?>" class="btn btn-secondary">
+                            <button name="btn_car" class="btn btn-secondary">
                                 <h5><?= $car[2] . " " . $car[1] ?></h5>
                             </button>
 
